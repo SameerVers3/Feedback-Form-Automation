@@ -11,8 +11,8 @@ This JavaScript script serves as a Chrome extension designed to automate the pro
 
 ## how to Install the Extension
 
-Step 1. **Download the Repository:** 
-Step 2. **Installing the Extension**
+### Step 1. **Download the Repository:** 
+### Step 2. **Installing the Extension**
 
 ### Google Chrome
 1. Open Chrome and navigate to chrome://extensions/.
