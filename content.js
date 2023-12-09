@@ -72,6 +72,22 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       "The learning materials did not provide enough practical examples, making it difficult for students to apply theoretical knowledge.",
     ];
 
+    const mixedLabInstructorFeedback = [
+      "The lab instructor exhibited exceptional expertise, delivering content with clarity and precision.",
+      "The learning environment in the lab was not conducive to active participation; it felt disorganized and unstructured.",
+      "Lab instructions were unclear and poorly communicated, hindering the learning process for students.",
+      "The lab instructor demonstrated a keen understanding of complex concepts, making challenging topics more accessible.",
+      "Hands-on activities in the lab were unengaging and failed to complement the theoretical aspects of the course effectively.",
+      "Lab sessions were well-organized, creating an environment that promoted a sense of structure and focus.",
+      "The lab instructor struggled to convey complex concepts, making it difficult for students to grasp essential topics.",
+      "The lab instructor encouraged critical thinking and problem-solving skills, fostering intellectual growth among students.",
+      "Multimedia resources used in the lab were ineffective, failing to enhance the overall learning experience.",
+      "The lab environment supported diverse learning styles and preferences, catering to the needs of every student.",
+      "The lab instructor's passion for the subject matter was evident, creating enthusiasm and inspiration among students.",
+      "Lab instructions were clearly communicated, contributing to a smooth and efficient learning process.",
+  ];
+  
+
     console.log("Randomly selecting radio buttons...");
 
     var radioButtons = document.querySelectorAll(
@@ -102,19 +118,25 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       var textarea = document.querySelectorAll('textarea[name="FB_Text"]');
 
       if (textarea.length > 0) {
-        if (textarea[0]) {
-          textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+        if (textarea.length == 1){
+          textarea[0].value = mixedLabInstructorFeedback[Math.floor(Math.random() * 10)];
           console.log("Content added to text area 1 in set:", i + 1);
         }
-        if (textarea[1]) {
-          textarea[1].value =
-            instructorEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 2 in set:", i + 1);
-        }
-        if (textarea[2]) {
-          textarea[2].value =
-            learningMaterialEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 3 in set:", i + 1);
+        else {
+          if (textarea[0]) {
+            textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 1 in set:", i + 1);
+          }
+          if (textarea[1]) {
+            textarea[1].value =
+              instructorEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 2 in set:", i + 1);
+          }
+          if (textarea[2]) {
+            textarea[2].value =
+              learningMaterialEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 3 in set:", i + 1);
+          }
         }
       } else {
         console.log("No text areas found.");
@@ -196,6 +218,20 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       "The learning materials not only provided theoretical knowledge but also included practical examples, enabling students to apply concepts in real-world scenarios.",
     ];
 
+    const positiveLabInstructorFeedback = [
+      "The lab instructor exhibited exceptional expertise, delivering content with clarity and precision.",
+      "The learning environment in the lab was highly conducive to active participation and collaborative learning.",
+      "Lab instructions were clearly communicated, contributing to a smooth and efficient learning process.",
+      "The lab instructor demonstrated a keen understanding of complex concepts, making challenging topics more accessible.",
+      "The hands-on activities in the lab were engaging and complemented the theoretical aspects of the course effectively.",
+      "Lab sessions were well-organized, creating an environment that promoted a sense of structure and focus.",
+      "The lab instructor encouraged critical thinking and problem-solving skills, fostering intellectual growth among students.",
+      "Multimedia resources used in the lab enhanced the overall learning experience, providing visual explanations and examples.",
+      "The lab environment supported diverse learning styles and preferences, catering to the needs of every student.",
+      "The lab instructor's passion for the subject matter was evident, creating enthusiasm and inspiration among students.",
+  ];
+  
+
     console.log("positive selecting radio buttons...");
 
     var radioButtons = document.querySelectorAll(
@@ -224,19 +260,25 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       var textarea = document.querySelectorAll('textarea[name="FB_Text"]');
 
       if (textarea.length > 0) {
-        if (textarea[0]) {
-          textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+        if (textarea.length == 1){
+          textarea[0].value = positiveLabInstructorFeedback[Math.floor(Math.random() * 10)];
           console.log("Content added to text area 1 in set:", i + 1);
         }
-        if (textarea[1]) {
-          textarea[1].value =
-            instructorEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 2 in set:", i + 1);
-        }
-        if (textarea[2]) {
-          textarea[2].value =
-            learningMaterialEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 3 in set:", i + 1);
+        else {
+          if (textarea[0]) {
+            textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 1 in set:", i + 1);
+          }
+          if (textarea[1]) {
+            textarea[1].value =
+              instructorEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 2 in set:", i + 1);
+          }
+          if (textarea[2]) {
+            textarea[2].value =
+              learningMaterialEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 3 in set:", i + 1);
+          }
         }
       } else {
         console.log("No text areas found.");
@@ -318,6 +360,20 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       "Learning materials failed to provide practical examples, leaving students without the ability to apply theoretical knowledge.",
     ];
 
+    const negativeLabInstructorFeedback = [
+      "The lab instructor lacked expertise, leading to confusion and frustration among students.",
+      "The learning environment in the lab was not conducive to active participation; it felt disorganized and unstructured.",
+      "Lab instructions were unclear and poorly communicated, hindering the learning process for students.",
+      "The lab instructor struggled to convey complex concepts, making it difficult for students to grasp essential topics.",
+      "Hands-on activities in the lab were unengaging and failed to complement the theoretical aspects of the course effectively.",
+      "Lab sessions were disorganized and lacked structure, creating a chaotic learning environment.",
+      "The lab instructor did not encourage critical thinking and problem-solving, hindering intellectual growth among students.",
+      "Multimedia resources used in the lab were ineffective, failing to enhance the overall learning experience.",
+      "The lab environment did not support diverse learning styles and preferences, neglecting the needs of some students.",
+      "The lab instructor displayed a lack of passion for the subject matter, creating a dull and uninspiring atmosphere.",
+  ];
+  
+
     console.log("negative selecting radio buttons...");
 
     var radioButtons = document.querySelectorAll(
@@ -346,19 +402,25 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       var textarea = document.querySelectorAll('textarea[name="FB_Text"]');
 
       if (textarea.length > 0) {
-        if (textarea[0]) {
-          textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+        if (textarea.length == 1){
+          textarea[0].value = negativeLabInstructorFeedback[Math.floor(Math.random() * 10)];
           console.log("Content added to text area 1 in set:", i + 1);
         }
-        if (textarea[1]) {
-          textarea[1].value =
-            instructorEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 2 in set:", i + 1);
-        }
-        if (textarea[2]) {
-          textarea[2].value =
-            learningMaterialEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 3 in set:", i + 1);
+        else {
+          if (textarea[0]) {
+            textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 1 in set:", i + 1);
+          }
+          if (textarea[1]) {
+            textarea[1].value =
+              instructorEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 2 in set:", i + 1);
+          }
+          if (textarea[2]) {
+            textarea[2].value =
+              learningMaterialEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 3 in set:", i + 1);
+          }
         }
       } else {
         console.log("No text areas found.");
@@ -410,6 +472,20 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       "The selection of learning materials somewhat catered to different learning styles, accommodating some preferences.",
     ];
 
+    const neutralLabInstructorFeedback = [
+      "The lab instructor provided adequate expertise, delivering content with moderate clarity.",
+      "The learning environment in the lab had aspects that were conducive to active participation, but improvements could be made.",
+      "Lab instructions were communicated, but some clarity issues impacted the learning process for students.",
+      "The lab instructor demonstrated a basic understanding of complex concepts, providing a reasonable level of accessibility.",
+      "Hands-on activities in the lab were moderately engaging, with room for improvement in complementing theoretical aspects.",
+      "Lab sessions had a moderate level of organization, providing a somewhat structured learning environment.",
+      "The lab instructor had a balanced approach to encouraging critical thinking and problem-solving among students.",
+      "Multimedia resources used in the lab had a moderate impact on enhancing the overall learning experience.",
+      "The lab environment partially supported diverse learning styles and preferences, with room for improvement.",
+      "The lab instructor displayed a standard level of enthusiasm for the subject matter.",
+  ];
+  
+
     console.log("Randomly selecting radio buttons...");
 
     var radioButtons = document.querySelectorAll(
@@ -440,19 +516,25 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       var textarea = document.querySelectorAll('textarea[name="FB_Text"]');
 
       if (textarea.length > 0) {
-        if (textarea[0]) {
-          textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+        if (textarea.length == 1){
+          textarea[0].value = neutralLabInstructorFeedback[Math.floor(Math.random() * 10)];
           console.log("Content added to text area 1 in set:", i + 1);
         }
-        if (textarea[1]) {
-          textarea[1].value =
-            instructorEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 2 in set:", i + 1);
-        }
-        if (textarea[2]) {
-          textarea[2].value =
-            learningMaterialEvaluation[Math.floor(Math.random() * 10)];
-          console.log("Content added to text area 3 in set:", i + 1);
+        else {
+          if (textarea[0]) {
+            textarea[0].value = courseEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 1 in set:", i + 1);
+          }
+          if (textarea[1]) {
+            textarea[1].value =
+              instructorEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 2 in set:", i + 1);
+          }
+          if (textarea[2]) {
+            textarea[2].value =
+              learningMaterialEvaluation[Math.floor(Math.random() * 10)];
+            console.log("Content added to text area 3 in set:", i + 1);
+          }
         }
       } else {
         console.log("No text areas found.");
