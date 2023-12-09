@@ -1,6 +1,6 @@
 # Course Feedback Form Automation
 
-This JavaScript script automates the process of filling out a course feedback form to save time.
+This JavaScript script serves as a Chrome extension designed to automate the process of filling out course feedback forms on our university's webpage. It provides various options for feedback submission.
 
 ## Features
 
@@ -9,42 +9,27 @@ This JavaScript script automates the process of filling out a course feedback fo
 - **Neutral Feedback:** The script includes functionality for providing neutral feedback.
 - **Random Feedback:** The script includes functionality for generating and providing random feedback.
 
-## Usage
+## how to Install the Extension
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/course-feedback-automation.git
-Navigate to the project directory:
+Step 1. **Download the Repository:** 
+Step 2. **Installing the Extension**
 
-bash
-Copy code
-cd course-feedback-automation
-Open the feedback form in your browser.
+### Google Chrome
+1. Open Chrome and navigate to chrome://extensions/.
 
-Open the browser console:
+2. Enable "Developer mode" in the top right.
 
-Google Chrome: Ctrl + Shift + J or Cmd + Option + J
-Mozilla Firefox: Ctrl + Shift + K or Cmd + Option + K
-Copy and paste the script into the console and press Enter.
+3. Click on "Load unpacked" and select the project directory (course-feedback-automation).
 
-Adding as a Browser Extension
-If you prefer a more permanent solution, you can add the script as a browser extension. Follow these steps:
+4. The extension should now be added to your browser.
 
-Google Chrome
-Open Chrome and navigate to chrome://extensions/.
+### Mozilla Firefox
+1. Open Firefox and navigate to about:debugging#/runtime/this-firefox.
 
-Enable "Developer mode" in the top right.
+2. Click on "Load Temporary Add-on" and select the manifest.json file from the project directory.
 
-Click on "Load unpacked" and select the project directory (course-feedback-automation).
+3. The extension should now be added to your browser.
 
-The extension should now be added to your browser.
+## Disclaimer
 
-Mozilla Firefox
-Open Firefox and navigate to about:debugging#/runtime/this-firefox.
-
-Click on "Load Temporary Add-on" and select the manifest.json file from the project directory.
-
-The extension should now be added to your browser.
-
-Disclaimer
-This script is intended for educational purposes only. Use it responsibly and respect the terms of service of the website you are interacting with.
+This script is intended for educational purposes and should be used responsibly and in compliance with the university's policies and guidelines.
